@@ -2,7 +2,7 @@
 
 Anonymous supplementary material for the review of RoboQuest. The same videos are in the supplementary material of the submission.
 
-**Watch all videos in the browser:** https://anonymous.4open.science/w/task-videos-FF33/
+**Watch all videos in the browser:** https://anonymous.4open.science/w/task-videos-D37B/
 
 The folder `videos/` contains one scripted demonstration per task, taken from the released demonstration dataset. The scripts know the hidden information but explore as an agent without it would, so each video shows the searching, inspection or testing the task requires.
 

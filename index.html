@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow">
+<title>RoboQuest task videos</title>
+<style>
+  :root { --bg:#ffffff; --fg:#1d1d1f; --muted:#5f6368; --line:#e3e3e8; --tag:#f1f3f4; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#141518; --fg:#e8e8ec; --muted:#a0a3aa; --line:#2c2e33; --tag:#23252a; } }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.55 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+  main { max-width:1100px; margin:0 auto; padding:32px 16px 64px; }
+  h1 { font-size:26px; margin:0 0 8px; }
+  h2 { font-size:19px; margin:0 0 4px; }
+  p { margin:6px 0; }
+  .muted { color:var(--muted); font-size:14px; }
+  .note { border-left:3px solid var(--line); padding:4px 12px; margin:18px 0 28px; }
+  section { border-top:1px solid var(--line); padding:22px 0; }
+  .fam { display:inline-block; font-size:12px; background:var(--tag); border-radius:4px; padding:1px 7px; margin-left:8px; vertical-align:2px; }
+  video { width:100%; height:auto; background:#000; border-radius:6px; margin-top:10px; }
+  nav { display:flex; flex-wrap:wrap; gap:6px 14px; font-size:14px; margin-top:10px; }
+  nav a { color:inherit; }
+</style>
+</head>
+<body>
+<main>
+  <h1>RoboQuest: example task videos</h1>
+  <p class="muted">Anonymous supplementary page for the review of RoboQuest. The same videos are in the supplementary material.</p>
+
+  <div class="note">
+    <p>One scripted demonstration per task, taken from the released demonstration dataset. The scripts know the hidden information but explore as an agent without it would, so each video shows the searching, inspection or testing the task requires.</p>
+    <p><b>Layout.</b> Top: the task, its family and the goal text given to the agent. Middle: the three camera views the agents receive (left scene camera, right scene camera, wrist camera). Bottom: the current stage of the demonstration, from the stage annotation stored with every frame; Puzzle Box also shows the outcome of each attempt. All videos play at 3&times; speed.</p>
+  </div>
+
+  <nav>
+    <a href="#search-room">Search Room</a><a href="#locked-storage">Locked Storage</a><a href="#blackout-search">Blackout Search</a>
+    <a href="#painted-cubes">Painted Cubes</a><a href="#marked-mugs">Marked Mugs</a><a href="#unfamiliar-containers">Unfamiliar Containers</a>
+    <a href="#puzzle-box">Puzzle Box</a><a href="#stamp-composition">Stamp Composition</a><a href="#wobbly-stand">Wobbly Stand</a><a href="#odd-parcel">Odd Parcel</a>
+  </nav>
+
+  <section id="search-room">
+    <h2>1. Search Room<span class="fam">Search</span></h2>
+    <p>The targets are hidden in closed compartments around the kitchen. The robot opens compartments until it has found all of them.</p>
+    <video controls preload="metadata" src="videos/01_Search_Room.mp4"></video>
+  </section>
+
+  <section id="locked-storage">
+    <h2>2. Locked Storage<span class="fam">Search</span></h2>
+    <p>A compartment opens only while the token of its colour rests on its reader. Tokens may be inside other compartments, so finding one changes where the robot can search next.</p>
+    <video controls preload="metadata" src="videos/02_Locked_Storage.mp4"></video>
+  </section>
+
+  <section id="blackout-search">
+    <h2>3. Blackout Search<span class="fam">Search</span></h2>
+    <p>The kitchen is dark. The robot carries a lantern that lights about a metre around itself, and sets it down beside whatever it works on.</p>
+    <video controls preload="metadata" src="videos/03_Blackout_Search.mp4"></video>
+  </section>
+
+  <section id="painted-cubes">
+    <h2>4. Painted Cubes<span class="fam">Inspect</span></h2>
+    <p>The deciding marks are on faces the cameras cannot see at the start. The robot turns each cube to read it, then sorts the cubes into two bins.</p>
+    <video controls preload="metadata" src="videos/04_Painted_Cubes.mp4"></video>
+  </section>
+
+  <section id="marked-mugs">
+    <h2>5. Marked Mugs<span class="fam">Inspect</span></h2>
+    <p>Each vessel carries a label underneath. The robot lifts and tilts each one to read its label, then places it on the matching pad.</p>
+    <video controls preload="metadata" src="videos/05_Marked_Mugs.mp4"></video>
+  </section>
+
+  <section id="unfamiliar-containers">
+    <h2>6. Unfamiliar Containers<span class="fam">Inspect</span></h2>
+    <p>The items are inside boxes with unfamiliar opening mechanisms. The robot tries different actions on each box until it opens.</p>
+    <video controls preload="metadata" src="videos/06_Unfamiliar_Containers.mp4"></video>
+  </section>
+
+  <section id="puzzle-box">
+    <h2>7. Puzzle Box<span class="fam">Test</span></h2>
+    <p>A chain of sliding bolts locks the lid, and a bolt moves only when nothing blocks it. In this episode three attempts fail before the robot finds an order that opens the box.</p>
+    <video controls preload="metadata" src="videos/07_Puzzle_Box.mp4"></video>
+  </section>
+
+  <section id="stamp-composition">
+    <h2>8. Stamp Composition<span class="fam">Test</span></h2>
+    <p>The stamp patterns are hidden inside opaque housings. The robot prints each stamp on a scratch board to learn its pattern, then composes the reference pattern on the final board.</p>
+    <video controls preload="metadata" src="videos/08_Stamp_Composition.mp4"></video>
+  </section>
+
+  <section id="wobbly-stand">
+    <h2>9. Wobbly Stand<span class="fam">Test</span></h2>
+    <p>A ball released on the stand rolls toward the short leg. The robot shims that leg, tests again with the ball, and switches to a thicker shim when the stand is still uneven.</p>
+    <video controls preload="metadata" src="videos/09_Wobbly_Stand.mp4"></video>
+  </section>
+
+  <section id="odd-parcel">
+    <h2>10. Odd Parcel<span class="fam">Test</span></h2>
+    <p>The odd parcels look like the others and are found by weighing parcels against each other on a balance.</p>
+    <video controls preload="metadata" src="videos/10_Odd_Parcel.mp4"></video>
+  </section>
+</main>
+</body>
+</html>
